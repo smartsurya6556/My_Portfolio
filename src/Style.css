@@ -1,0 +1,419 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#000;
+  --text:#fff;
+  --neon:#00ffcc;
+}
+
+/* 🌌 Clean dark background */
+body{
+  font-family:Arial;
+  color:var(--text);
+  background:#000;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  background:rgba(0,0,0,0.6);
+}
+
+nav a{
+  color:var(--text);
+  margin:0 10px;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+nav a:hover{
+  opacity:1;
+  color:var(--neon);
+}
+
+/* BUTTON */
+button{
+  padding:8px 14px;
+  border:none;
+  background:var(--neon);
+  cursor:pointer;
+  opacity:0.7;
+  transition:0.3s;
+}
+
+button:hover{
+  opacity:1;
+  transform:scale(1.05);
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+}
+
+/* TEXT */
+.typing{
+  color:var(--neon);
+}
+
+/* CARD */
+.card{
+  margin:20px;
+  padding:20px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+
+.card:hover{
+  box-shadow:0 0 15px var(--neon);
+}
+
+/* PARTICLES */
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+.btn-download{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 25px;
+
+  border-radius:30px;
+  background:#00ffcc;
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+
+  position:relative;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+/* hover */
+.btn-download:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px #00ffcc;
+}
+
+/* bouncing icon */
+.icon{
+  display:inline-block;
+  animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(5px);}
+}
+
+/* progress bar */
+.btn-download::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:3px;
+  width:0%;
+  background:#000;
+  transition:width 2s linear;
+}
+
+.btn-download.loading::after{
+  width:100%;
+}
+
+
+
+/* INTRO BOX */
+.intro-box{
+  margin-top:25px;
+  padding:25px;
+  max-width:600px;
+
+  border-radius:20px;
+
+  /* Glass background */
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+
+  /* Glow border */
+  border:1px solid rgba(255,255,255,0.1);
+
+  /* Soft shadow */
+  box-shadow:0 0 15px rgba(255,255,255,0.08);
+
+  text-align:center;
+  transition:0.4s ease;
+}
+
+/* Title */
+.intro-box h2{
+  margin-bottom:10px;
+  color:#00ffcc;
+}
+
+/* Text */
+.intro-box p{
+  margin:8px 0;
+  line-height:1.6;
+  opacity:0.85;
+}
+
+/* Hover effect */
+.intro-box:hover{
+  transform:translateY(-5px) scale(1.02);
+  box-shadow:
+    0 0 20px rgba(0,255,200,0.2),
+    0 0 40px rgba(0,255,200,0.1);
+}
+
+/* ABOUT PAGE */
+.about{
+  padding:50px 20px;
+  text-align:center;
+}
+
+/* headings */
+.about h1{
+  font-size:32px;
+  margin-bottom:20px;
+  color:var(--neon);
+}
+
+.about h2{
+  margin-top:40px;
+  margin-bottom:15px;
+  color:var(--neon);
+}
+
+/* about box */
+.about-box{
+  max-width:600px;
+  margin:20px auto;
+  padding:20px;
+
+  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+
+  transition:0.3s;
+}
+
+.about-box:hover{
+  box-shadow:0 0 15px var(--neon);
+}
+
+/* skills grid */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+/* reuse card */
+.card{
+  margin:10px;
+  padding:15px 20px;
+  border-radius:10px;
+  background:rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px var(--neon);
+}
+
+
+/* CANVAS BACKGROUND */
+#bgCanvas{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* BODY */
+body{
+  background:#000;
+  overflow-x:hidden;
+}
+
+/* CANVAS BACKGROUND */
+#bgCanvas{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* BODY */
+body{
+  background:#000;
+  overflow-x:hidden;
+}
+
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin:30px 0;
+  color:var(--neon);
+}
+
+/* PROJECT GRID */
+.projects{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:20px;
+}
+
+/* CARD */
+.projects .card{
+  width:280px;
+  margin:15px;
+  padding:20px;
+
+  background:rgba(255,255,255,0.05);
+  text-align:center;
+
+  transition:0.3s;
+}
+
+.projects .card:hover{
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 0 20px var(--neon);
+}
+
+/* BUTTON */
+.projects button{
+  margin-top:10px;
+  padding:8px 15px;
+  background:var(--neon);
+  border:none;
+  cursor:pointer;
+}
+
+body{
+  transition:.3s;
+}
+
+body.exit{
+  opacity:0;
+  transform:scale(0.98);
+}
+
+.contact-card{
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,255,200,0.2);
+}
+.input-group{
+  position: relative;
+  margin: 20px 0;
+}
+.input-group input,
+.input-group textarea{
+  width: 100%;
+  padding: 12px 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  color:#fff;
+  outline:none;
+}
+.input-group label{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color:#aaa;
+  pointer-events: none;
+  transition:0.3s;
+}
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label{
+  top:-10px;
+  font-size: 12px;
+  color:#00ffcc;
+}
+.btn-send{
+  background:#00ffcc;
+  border:none;
+  padding:10px 20px;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.btn-send:hover{
+  transform: scale(1.05);
+  box-shadow:0 0 20px #00ffcc;
+}
+
+.btn-download {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 25px;
+  border-radius:30px;
+  background:#FFD700; /* golden */
+  color:#000;
+  font-weight:bold;
+  cursor:pointer;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn-download:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 20px #FFD700;
+}
+
+.btn-view {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00ffcc;  /* neon green glow */
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-view:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: black;
+}
